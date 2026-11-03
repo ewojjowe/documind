@@ -42,10 +42,10 @@ VOYAGE_API_KEY=...
 Start the dev server with auto-reload:
 
 ```bash
-uv run uvicorn app.main:app --reload
+uv run uvicorn app.main:app --reload --port 5554
 ```
 
-Check it at <http://localhost:8000/api/health>; interactive docs are at <http://localhost:8000/docs>.
+Check it at <http://localhost:5554/api/health>; interactive docs are at <http://localhost:5554/docs>.
 
 Run tests and lint:
 
@@ -67,13 +67,13 @@ Install dependencies:
 npm install
 ```
 
-Start the dev server with hot reload (proxies `/api` to the API on port 8000):
+Start the dev server with hot reload (proxies `/api` to the API on port 5554):
 
 ```bash
 npm run dev
 ```
 
-Open <http://localhost:5173>.
+Open <http://localhost:5555>.
 
 Type-check and build for production into `web/dist/`:
 
@@ -97,7 +97,7 @@ npm run test:unit -- --run
 
 Go server that will let MCP clients (Claude Desktop, Claude Code) search the corpus.
 It is a placeholder until Phase 4; after that it needs the API running and reads
-`DOCUMIND_API` (default `http://localhost:8000`). Run these from `mcp/`.
+`DOCUMIND_API` (default `http://localhost:5554`). Run these from `mcp/`.
 
 Run it:
 
